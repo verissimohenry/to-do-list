@@ -9,7 +9,8 @@ A simple Todo app where a user can:
 - Edit Todos
 - Remove Projects or Todos
 
-![]()
+![screenshot]()
+![screenshot]()
 
 ## Built With
 
