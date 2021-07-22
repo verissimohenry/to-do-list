@@ -78,13 +78,13 @@ function displayTodoForm() {
   dateInput.setAttribute('type', 'date');
 
   const descriptionLabel = todoForm.appendChild(
-    document.createElement('label')
+    document.createElement('label'),
   );
   descriptionLabel.setAttribute('class', 'form-label mt-3');
   descriptionLabel.innerHTML = 'Description';
 
   const descriptionArea = todoForm.appendChild(
-    document.createElement('textarea')
+    document.createElement('textarea'),
   );
   descriptionArea.setAttribute(
     'class',
