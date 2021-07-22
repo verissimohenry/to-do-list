@@ -9,8 +9,8 @@ A simple Todo app where a user can:
 - Edit Todos
 - Remove Projects or Todos
 
-![screenshot]()
-![screenshot]()
+![screenshot](assets/image.png)
+![screenshot](assets/image2.png)
 
 ## Built With
 
