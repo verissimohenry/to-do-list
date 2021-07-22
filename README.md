@@ -20,10 +20,6 @@ A simple Todo app where a user can:
 - Webpack
 - Bootstrap
 
-## Live demo
-
-[link]()
-
 ## Getting Started
 
 To set up a local copy of the project
