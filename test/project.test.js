@@ -7,15 +7,15 @@ target.value = 'Jest-test';
 const projects = initStart.getProjects();
 
 describe('createProject', () => {
-    it('Creates a new Project', () => {
-        const newProject = project.projectModule.createProject(target);
-        expect(newProject instanceof project.Project).toEqual(true);
-    });
+  it('Creates a new Project', () => {
+    const newProject = project.projectModule.createProject(target);
+    expect(newProject instanceof project.Project).toEqual(true);
+  });
 });
 
 describe('removeProject', () => {
-    it('Removes a new Project', () => {
-        const resultProjects = project.removeProject(projects, projects[0]);
-        expect(resultProjects.length).toBe(projects.length - 1);
-    });
+  it('Removes a new Project', () => {
+    const resultProjects = project.removeProject(projects, projects[0]);
+    expect(resultProjects.length).toBe(projects.length - 1);
+  });
 });
