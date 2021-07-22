@@ -34,8 +34,8 @@ function updateStatus(projects, project, id) {
         if (project.todos[i].id === id && project.todos[i].status === true) {
             project.todos[i].status = false;
         } else if (project.todos[i].id === id && project.todos[i].status === false) {
-            project.todos[i].status = true;
-        }
+  project.todos[i].status = true;
+    }
     }
 
     localStorage.toDoProjects = JSON.stringify(projects);
