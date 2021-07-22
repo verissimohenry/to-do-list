@@ -5,10 +5,10 @@ import {
 
 class Todo {
     constructor(title, date, description, priority, project) {
-        this.title = title;
-        this.date = date;
-        this.description = description;
-        this.priority = priority;
+  this.title = title;
+    this.date = date;
+    this.description = description;
+  this.priority = priority;
         this.project = project;
         this.id = Date.now().toString();
         this.status = false;
@@ -18,16 +18,16 @@ class Todo {
         this.title = title;
         this.date = date;
         this.description = description;
-        this.priority = priority;
-        return this;
+  this.priority = priority;
+    return this;
     }
-}
+  }
 
 function removeTodo(projects, project, todoId) {
     project.todos = project.todos.filter((x) => x.id !== todoId);
-    localStorage.toDoProjects = JSON.stringify(projects);
+  localStorage.toDoProjects = JSON.stringify(projects);
     return project.todos;
-}
+    }
 
 function updateStatus(projects, project, id) {
     for (let i = 0; i < project.todos.length; i += 1) {
