@@ -88,7 +88,7 @@ function displayTodoForm() {
   );
   descriptionArea.setAttribute(
     'class',
-    'form-control mt-2 todo-description w-75'
+    'form-control mt-2 todo-description w-75',
   );
   descriptionArea.setAttribute('placeholder', '     Add Todo description');
 
@@ -97,14 +97,14 @@ function displayTodoForm() {
   priorityLabel.innerHTML = 'Select Priority';
 
   const prioritySelectTag = todoForm.appendChild(
-    document.createElement('select')
+    document.createElement('select'),
   );
   prioritySelectTag.setAttribute('class', 'form-select priority-select w-50');
 
   const priorities = ['High', 'Medium', 'Low'];
   priorities.forEach((priority) => {
     const option = prioritySelectTag.appendChild(
-      document.createElement('option')
+      document.createElement('option'),
     );
     option.setAttribute('value', priority);
     option.innerHTML = priority;
@@ -115,7 +115,7 @@ function displayTodoForm() {
   projectLabel.innerHTML = 'Select Project';
 
   const projectSelectTag = todoForm.appendChild(
-    document.createElement('select')
+    document.createElement('select'),
   );
   projectSelectTag.setAttribute('class', 'w-50 project-select form-select');
   const projects = getProjects();
@@ -123,17 +123,17 @@ function displayTodoForm() {
 
   if (selectedProjectId) {
     const option = projectSelectTag.appendChild(
-      document.createElement('option')
+      document.createElement('option'),
     );
     const project = projects.find(
-      (element) => element.id === selectedProjectId
+      (element) => element.id === selectedProjectId,
     );
     option.setAttribute('value', project.name);
     option.innerHTML = project.name;
   } else {
     for (let i = 0; i < projects.length; i += 1) {
       const option = projectSelectTag.appendChild(
-        document.createElement('option')
+        document.createElement('option'),
       );
       option.setAttribute('value', projects[i].name);
       option.innerHTML = projects[i].name;
@@ -143,7 +143,7 @@ function displayTodoForm() {
   const buttons = projectContainer.appendChild(document.createElement('p'));
   buttons.setAttribute(
     'class',
-    'd-flex justify-content-between mt-4 w-75 mx-auto todo-buttons'
+    'd-flex justify-content-between mt-4 w-75 mx-auto todo-buttons',
   );
   const createTodoBtn = buttons.appendChild(document.createElement('button'));
   createTodoBtn.setAttribute('class', 'btn btn-info create-todo');
@@ -174,26 +174,26 @@ function displayTodos() {
   clearContent(projectContainer);
   if (project) {
     const projectDetails = projectContainer.appendChild(
-      document.createElement('p')
+      document.createElement('p'),
     );
     projectDetails.setAttribute(
       'class',
-      'd-flex justify-content-around active'
+      'd-flex justify-content-around active',
     );
 
     const projectName = projectDetails.appendChild(
-      document.createElement('span')
+      document.createElement('span'),
     );
     projectName.innerHTML = project.name;
     projectName.setAttribute('class', '');
 
     project.todos.forEach((item) => {
       const itemCont = projectContainer.appendChild(
-        document.createElement('div')
+        document.createElement('div'),
       );
       itemCont.setAttribute(
         'class',
-        `d-flex justify-content-between ${item.id}`
+        `d-flex justify-content-between ${item.id}`,
       );
       const pTag = itemCont.appendChild(document.createElement('p'));
 
@@ -221,7 +221,7 @@ function displayTodos() {
         document.querySelector('.todo-description').value = item.description;
         const projectSelect = document.querySelector('.project-select');
         const projectSelectLabel = document.querySelector(
-          '.project-select-label'
+          '.project-select-label',
         );
         const todoForm = document.querySelector('.todo-form');
         todoForm.removeChild(projectSelect);
@@ -235,7 +235,7 @@ function displayTodos() {
 
         const updateTodoBtn = buttonsContainer.insertBefore(
           document.createElement('button'),
-          cancelTodoButton
+          cancelTodoButton,
         );
         updateTodoBtn.setAttribute('class', 'btn btn-info');
         updateTodoBtn.innerHTML = 'Save Changes';
@@ -274,7 +274,7 @@ function displayTodos() {
     });
 
     const deleteProjectBtn = projectContainer.appendChild(
-      document.createElement('button')
+      document.createElement('button'),
     );
     deleteProjectBtn.setAttribute('class', 'btn btn-danger remove-project-btn');
     deleteProjectBtn.innerHTML = 'Delete Project';
@@ -301,7 +301,7 @@ function start() {
   const mainContent = container.appendChild(document.createElement('div'));
   mainContent.setAttribute('class', 'main-content');
   const projectSection = mainContent.appendChild(
-    document.createElement('section')
+    document.createElement('section'),
   );
   projectSection.setAttribute('class', 'project-section ');
   const header = projectSection.appendChild(document.createElement('h3'));
@@ -312,23 +312,23 @@ function start() {
   projectList.setAttribute('class', 'project-list mx-auto w-75');
 
   const formContainer = projectSection.appendChild(
-    document.createElement('div')
+    document.createElement('div'),
   );
   formContainer.setAttribute('class', 'form-container mx-auto w-75');
   const addProjectBtn = formContainer.appendChild(
-    document.createElement('button')
+    document.createElement('button'),
   );
 
   addProjectBtn.setAttribute(
     'class',
-    'btn text-center  mt-5 mx-auto text-white bg-dark add-project'
+    'btn text-center  mt-5 mx-auto text-white bg-dark add-project',
   );
   addProjectBtn.textContent = 'Add Project';
   // eslint-disable-next-line no-use-before-define
   addProjectBtn.addEventListener('click', displayProjectForm);
 
   const taskSection = mainContent.appendChild(
-    document.createElement('section')
+    document.createElement('section'),
   );
   taskSection.setAttribute('class', 'task-section');
 
@@ -372,13 +372,13 @@ function displayProjectForm() {
 
   btnContainer.setAttribute(
     'class',
-    'btn-container d-flex justify-content-between mx-auto'
+    'btn-container d-flex justify-content-between mx-auto',
   );
   const submitBtn = document.createElement('button');
 
   submitBtn.setAttribute(
     'class',
-    'btn text-light bg-dark mt-2 mr-0 submit-btn'
+    'btn text-light bg-dark mt-2 mr-0 submit-btn',
   );
   submitBtn.innerHTML = 'Submit';
 
@@ -386,7 +386,7 @@ function displayProjectForm() {
 
   cancelBtn.setAttribute(
     'class',
-    'btn text-light bg-danger mt-2 mr-0 cancel-btn '
+    'btn text-light bg-danger mt-2 mr-0 cancel-btn ',
   );
   cancelBtn.innerHTML = 'Cancel';
 

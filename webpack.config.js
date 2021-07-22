@@ -11,7 +11,7 @@ module.exports = {
     rules: [{
       test: /\.scss$/i,
       use: ['style-loader', 'css-loader', 'sass-loader'],
-    }, ],
+    }],
   },
   output: {
     filename: 'main.js',
