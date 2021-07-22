@@ -24,15 +24,15 @@ class Todo {
 }
 
 function removeTodo(projects, project, todoId) {
-    project.todos = project.todos.filter((x) => x.id !== todoId);
+  project.todos = project.todos.filter((x) => x.id !== todoId);
   localStorage.toDoProjects = JSON.stringify(projects);
-    return project.todos;
+  return project.todos;
 }
 
 function updateStatus(projects, project, id) {
   for (let i = 0; i < project.todos.length; i += 1) {
     if (project.todos[i].id === id && project.todos[i].status === true) {
-        project.todos[i].status = false;
+     project.todos[i].status = false;
     } else if (project.todos[i].id === id && project.todos[i].status === false) {
       project.todos[i].status = true;
     }
@@ -45,7 +45,7 @@ function createTodo(title, date, description, priority, project) {
   if (title !== '' && description !== '' && priority !== '' && project !== '' && date !== '') {
     const projects = getProjects();
     const index = projects.findIndex(({
-        name,
+      name,
     }) => name === project);
     const newTodo = new Todo(title, date, description, priority, project);
     projects[index].todos.push(newTodo);
