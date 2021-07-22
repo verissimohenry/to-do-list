@@ -9,12 +9,12 @@ module.exports = {
   },
   module: {
     rules: [{
-         test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-    },],
-    },
+      test: /\.scss$/i,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+    },]
+  },
   output: {
-  filename: 'main.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };
