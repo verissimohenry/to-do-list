@@ -1,4 +1,4 @@
-function displayNav() {
+displayNav = () => {
   const container = document.getElementById('content');
   const nav = container.appendChild(document.createElement('nav'));
   nav.setAttribute('class', 'navbar navbar-dark bg-dark');
@@ -9,7 +9,7 @@ function displayNav() {
   navBrand.textContent = 'To Do List';
 }
 
-function displayFooter() {
+displayFooter = () => {
   const container = document.getElementById('content');
   const footer = container.appendChild(document.createElement('footer'));
   footer.setAttribute('class', 'bg-dark');

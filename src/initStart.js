@@ -15,7 +15,7 @@ const predefinedProjects = [
   new Project('Tomorrow'),
 ];
 
-function getProjects() {
+getProjects = () => {
   if (localStorage.getItem('toDoProjects')) {
     const projects = JSON.parse(localStorage.getItem('toDoProjects'));
     for (let i = 0; i < projects.length; i += 1) {
@@ -34,7 +34,7 @@ function clearContent(element) {
   element.textContent = '';
 }
 
-function displayProjects() {
+displayProjects = () => {
   const projectsList = document.querySelector('.project-list');
   clearContent(projectsList);
   let selectedProjectId = localStorage.getItem('selectedProjectId');
@@ -56,7 +56,7 @@ function displayProjects() {
   displayTodos(selectedProjectId);
 }
 
-function displayTodoForm() {
+displayTodoForm = () => {
   const projectContainer = document.querySelector('.project-container');
   clearContent(projectContainer);
   const todoForm = projectContainer.appendChild(document.createElement('form'));
@@ -168,7 +168,7 @@ function displayTodoForm() {
   cancelTodoBtn.addEventListener('click', displayProjects);
 }
 
-function displayTodos() {
+displayTodos = () => {
   const selectedProjectId = localStorage.getItem('selectedProjectId');
   const projects = getProjects();
   const project = projects.find((element) => element.id === selectedProjectId);
@@ -297,7 +297,7 @@ function displayTodos() {
   }
 }
 
-function start() {
+start = () => {
   clearContent(container);
   displayNav();
   const mainContent = container.appendChild(document.createElement('div'));
@@ -352,7 +352,7 @@ function start() {
   displayProjects();
 }
 
-function displayProjectForm() {
+displayProjectForm = () => {
   const formContainer = document.querySelector('.form-container');
   clearContent(formContainer);
 
