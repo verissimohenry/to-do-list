@@ -9,7 +9,7 @@ function displayNav() {
   navBrand.textContent = 'To Do List';
 }
 
-displayFooter = () => {
+function displayFooter() {
   const container = document.getElementById('content');
   const footer = container.appendChild(document.createElement('footer'));
   footer.setAttribute('class', 'bg-dark');

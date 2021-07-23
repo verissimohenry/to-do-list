@@ -2,7 +2,7 @@ import './style.scss';
 import { displayNav, displayFooter } from './structure';
 import { start } from './initStart';
 
-initializer = () => {
+function initializer() {
   displayNav();
   start();
   displayFooter();

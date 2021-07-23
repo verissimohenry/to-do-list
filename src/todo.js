@@ -23,13 +23,13 @@ class Todo {
   }
 }
 
-removeTodo = (projects, project, todoId) => {
+function removeTodo(projects, project, todoId) {
   project.todos = project.todos.filter((x) => x.id !== todoId);
   localStorage.toDoProjects = JSON.stringify(projects);
   return project.todos;
 }
 
-updateStatus = (projects, project, id) => {
+function updateStatus(projects, project, id) {
   for (let i = 0; i < project.todos.length; i += 1) {
     if (project.todos[i].id === id && project.todos[i].status === true) {
       project.todos[i].status = false;
@@ -41,7 +41,7 @@ updateStatus = (projects, project, id) => {
   localStorage.toDoProjects = JSON.stringify(projects);
 }
 
-createTodo = (title, date, description, priority, project) => {
+function createTodo(title, date, description, priority, project) {
   if (title !== '' && description !== '' && priority !== '' && project !== '' && date !== '') {
     const projects = getProjects();
     const index = projects.findIndex(({

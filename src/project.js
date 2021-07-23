@@ -34,7 +34,7 @@ const projectModule = (() => {
   };
 })();
 
-removeProject = (projects, project) => {
+function removeProject(projects, project) {
   projects = projects.filter((element) => element.id !== project.id);
   localStorage.toDoProjects = JSON.stringify(projects);
   return projects;
