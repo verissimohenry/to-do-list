@@ -1,4 +1,4 @@
-displayNav = () => {
+function displayNav() {
   const container = document.getElementById('content');
   const nav = container.appendChild(document.createElement('nav'));
   nav.setAttribute('class', 'navbar navbar-dark bg-dark');
