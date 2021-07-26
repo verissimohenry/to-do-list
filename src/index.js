@@ -2,10 +2,10 @@ import './style.scss';
 import { displayNav, displayFooter } from './structure';
 import { start } from './initStart';
 
-function initializer() {
+const initializer = () => {
   displayNav();
   start();
   displayFooter();
-}
+};
 
 initializer();

@@ -15,7 +15,7 @@ const predefinedProjects = [
   new Project('Tomorrow'),
 ];
 
-function getProjects() {
+const getProjects = () => {
   if (localStorage.getItem('toDoProjects')) {
     const projects = JSON.parse(localStorage.getItem('toDoProjects'));
     for (let i = 0; i < projects.length; i += 1) {
@@ -28,13 +28,13 @@ function getProjects() {
     return projects;
   }
   return predefinedProjects;
-}
+};
 
-function clearContent(element) {
+const clearContent = (element) => {
   element.textContent = '';
-}
+};
 
-function displayProjects() {
+const displayProjects = () => {
   const projectsList = document.querySelector('.project-list');
   clearContent(projectsList);
   let selectedProjectId = localStorage.getItem('selectedProjectId');
@@ -54,7 +54,7 @@ function displayProjects() {
   });
   // eslint-disable-next-line no-use-before-define
   displayTodos(selectedProjectId);
-}
+};
 
 function displayTodoForm() {
   const projectContainer = document.querySelector('.project-container');
