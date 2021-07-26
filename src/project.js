@@ -34,11 +34,11 @@ const projectModule = (() => {
   };
 })();
 
-function removeProject(projects, project) {
+const removeProject = (projects, project) => {
   projects = projects.filter((element) => element.id !== project.id);
   localStorage.toDoProjects = JSON.stringify(projects);
   return projects;
-}
+};
 
 export default projectModule;
 export {
