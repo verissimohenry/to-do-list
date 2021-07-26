@@ -1,20 +1,18 @@
-const path = require('path');
+import { resolve } from 'path';
 
-module.exports = {
-  mode: 'development',
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist',
-  },
-  module: {
-    rules: [{
-      test: /\.scss$/i,
-      use: ['style-loader', 'css-loader', 'sass-loader'],
-    }],
-  },
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
+export const mode = 'development';
+export const entry = './src/index.js';
+export const devtool = 'inline-source-map';
+export const devServer = {
+  contentBase: './dist',
+};
+export const module = {
+  rules: [{
+    test: /\.scss$/i,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+  }],
+};
+export const output = {
+  filename: 'main.js',
+  path: resolve(__dirname, 'dist'),
 };
