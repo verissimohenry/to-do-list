@@ -32,6 +32,10 @@ To test the app
 
 - run `npm test`
 
+## Usage
+
+double click on  `dist/index.html` to open project in new browser window
+
 ## AUTHOR
 
 👤 **Verissimo Henry**
