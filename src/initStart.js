@@ -56,7 +56,7 @@ const displayProjects = () => {
   displayTodos(selectedProjectId);
 };
 
-function displayTodoForm() {
+const displayTodoForm = () => {
   const projectContainer = document.querySelector('.project-container');
   clearContent(projectContainer);
   const todoForm = projectContainer.appendChild(document.createElement('form'));
@@ -166,9 +166,9 @@ function displayTodoForm() {
   cancelTodoBtn.setAttribute('class', 'btn btn-danger cancel-todo');
   cancelTodoBtn.innerHTtestML = 'Cancel';
   cancelTodoBtn.addEventListener('click', displayProjects);
-}
+};
 
-function displayTodos() {
+const displayTodos = () => {
   const selectedProjectId = localStorage.getItem('selectedProjectId');
   const projects = getProjects();
   const project = projects.find((element) => element.id === selectedProjectId);
@@ -295,9 +295,9 @@ function displayTodos() {
       }
     });
   }
-}
+};
 
-function start() {
+const start = () => {
   clearContent(container);
   displayNav();
   const mainContent = container.appendChild(document.createElement('div'));
@@ -350,9 +350,9 @@ function start() {
   });
 
   displayProjects();
-}
+};
 
-function displayProjectForm() {
+const displayProjectForm = () => {
   const formContainer = document.querySelector('.form-container');
   clearContent(formContainer);
 
@@ -404,6 +404,6 @@ function displayProjectForm() {
     project.createProject(nameInput);
     start();
   });
-}
+};
 
 export { start, getProjects };
